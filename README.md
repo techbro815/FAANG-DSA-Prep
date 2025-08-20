@@ -8,7 +8,7 @@
 
 | Difficulty | Problems Solved |
 |------------|------------------|
-| Easy       | 100+             |
+| Easy       | In Progress           |
 | Medium     | In Progress      |
 | Hard       | Soon™            |
 
@@ -32,13 +32,11 @@
 
 ## 🛠 Tools Used
 
-- LeetHub (Chrome Extension) for GitHub auto-sync
 - LeetCode for problem solving
 - GitHub Contributions for public proof of consistency
 - CSV Tracker for detailed logging (not public)
 
 ---
 
-📌 _Check back after **July 31st** for a full update and analytics report!_
 
 ⏱️ _Until then, grinding daily... Let’s solve one more problem today!_
