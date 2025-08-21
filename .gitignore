@@ -1,0 +1,22 @@
+# macOS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Java / builds
+target/
+out/
+*.class
+.gradle/
+build/
+
+# C/C++
+*.o
+*.out
