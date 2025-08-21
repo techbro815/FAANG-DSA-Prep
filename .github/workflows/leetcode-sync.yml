@@ -1,0 +1,27 @@
+name: LeetCode → GitHub sync
+
+on:
+  workflow_dispatch:  # allows manual run
+  schedule:
+    # runs daily at 06:30 IST (01:00 UTC)
+    - cron: "0 1 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sync from LeetCode
+        uses: joshcai/leetcode-sync@v1.7
+        with:
+          github-token: ${{ github.token }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: leetcode
+          commit-header: "[LeetCode Sync]"
+          verbose: true
