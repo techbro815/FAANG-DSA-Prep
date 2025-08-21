@@ -1,20 +1,24 @@
-# Sliding Window
-**When to use:** Subarray/substring problems with “at most/at least/exactly K …”.
+# Two Pointers
+**When to use:** Sorted arrays/strings, opposite-end scans, dedup, partition, pair-sum.
 
-**Core idea:** Expand window with `right`; while invalid, shrink from `left`; track answer on each step.
+**Core idea:** Maintain two indices that move based on comparison/constraint to avoid O(n^2).
 
-**Template (pseudo):**
-left = 0
-for right in range(n):
-add arr[right] to window/state
-while window invalid:
-remove arr[left]; left += 1
-update answer from current window
+**Templates**
+*Opposite ends (sorted)*:
+i = 0; j = n-1
+while i < j:
+if good(i,j): update ans, move one/both
+elif need larger sum: i++
+else: j--
 
-
+*Fast/slow cycle detection*:
+slow=head; fast=head
+while fast && fast.next:
+slow = slow.next
+fast = fast.next.next
+if slow==fast: cycle
 **Pitfalls**
-- Forgetting to shrink enough (infinite loop)
-- Using length as `right-left` instead of `right-left+1`
-- Mixing “at most K” with “exactly K” logic
+- Not proving movement makes progress (can loop forever)
+- Forgetting stability requirements (when removing duplicates in-place)
 
-**Practice set:** LC‑3, LC‑76, LC‑159, LC‑424, LC‑1004
+**Practice set:** LC‑1, LC‑15, LC‑19, LC‑26, LC‑167
