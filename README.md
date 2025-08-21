@@ -40,3 +40,10 @@
 
 
 ⏱️ _Until then, grinding daily... Let’s solve one more problem today!_
+
+
+
+![Sync](https://github.com/techbro815/FAANG-DSA-Prep/actions/workflows/leetcode-sync.yml/badge.svg)
+
+**Auto‑synced:** [/leetcode](./leetcode) • **Curated:** [/solutions](./solutions) • **Patterns:** [/patterns](./patterns) • **Notes:** [/notes](./notes) • **Log:** [/trackers/daily-log.md](./trackers/daily-log.md)
+
